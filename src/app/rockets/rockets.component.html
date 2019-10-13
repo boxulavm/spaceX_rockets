@@ -21,13 +21,14 @@
     <div class="col-sm-12 col-md-6">
         <h4 class=" mb-2">{{ rocket.rocket_name }} 
           <small *ngIf='rocket.active === true' class="text-success">ACTIVE</small>
-          <small *ngIf='rocket.active === false' class="text-danger">NOT ACTIVE</small>
+          <small *ngIf='rocket.active === false' class="text-danger">RETIRED</small>
         </h4>
         <p class="mb-2">First flight : <span class="text-info">{{ rocket.first_flight }}</span></p>
         <p class="lead mb-4">{{ rocket.description }}</p>
         <h5>Diameter: <span class="text-info">{{ rocket.diameter.meters }}</span>M</h5>
         <h5>Height: <span class="text-info">{{ rocket.height.meters }}</span>M</h5>
         <h5>Mass: <span class="text-info">{{ rocket.mass.kg }}</span> KG</h5>
+        <button [routerLink]="['/gallery', rocket.rocket_id]" class="btn btn-outline-info">Gallery</button>
     </div>
 
   </div>

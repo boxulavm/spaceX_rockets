@@ -1,22 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { RouterModule } from '@angular/router'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ShowcaseComponent } from './showcase/showcase.component';
 import { RocketsComponent } from './rockets/rockets.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ShowcaseComponent,
-    RocketsComponent
+    RocketsComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot([
+      {path: '', component: RocketsComponent},
+      {path: 'gallery/:rocketId', component: GalleryComponent},
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
