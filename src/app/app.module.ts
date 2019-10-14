@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ShowcaseComponent } from './showcase/showcase.component';
 import { RocketsComponent } from './rockets/rockets.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { ImgModalComponent } from './img-modal/img-modal.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { GalleryComponent } from './gallery/gallery.component';
     NavbarComponent,
     ShowcaseComponent,
     RocketsComponent,
-    GalleryComponent
+    GalleryComponent,
+    ImgModalComponent
   ],
   imports: [
     BrowserModule,

@@ -18,7 +18,7 @@ export class RocketsComponent implements OnInit {
       .then(blob => blob.json())
       .then(data => {
         this.rockets = [...data]
-        console.log(this.rockets)
+        // console.log(this.rockets)
         this.loading = false;
       });
   }

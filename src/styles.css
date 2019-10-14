@@ -22,6 +22,38 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 200px;
 }
 
+/* Modal */
+
+.gallery img {
+    cursor: pointer;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 50;
+}
+
+.img-modal {
+    position: fixed;
+    top: 5vh;
+    left: 5vw;
+    width: 90vw;
+    padding: 16px;
+    z-index : 100;
+    background: transparent;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+    .img-modal img {
+        text-align: center;
+    }
+
 @media(max-width:500px){
     .showcase{
         padding-top: 100px;

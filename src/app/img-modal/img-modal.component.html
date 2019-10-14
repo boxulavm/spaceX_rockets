@@ -1,0 +1,8 @@
+<div class="backdrop" (click)="onClose()"></div>
+<div (click)="onClose()" class="img-modal text-center">
+    <p class="lead">{{ title }}</p>
+    <img src={{imgUrl}} class="img-fluid" >
+    <div class="img-modal-actions">
+        <button (click)="onClose()" class="btn btn-danger my-2">Close</button>
+    </div>
+</div>

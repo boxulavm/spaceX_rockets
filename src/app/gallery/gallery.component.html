@@ -4,11 +4,14 @@
     <h2 class="my-4 text-light"><span class="text-info">{{  rocketData.rocket_name }}</span>  Gallery</h2>
 
     <div class="row">
-        <div *ngFor='let img of rocketData.flickr_images' class="col-sm-12 col-md-6 col-lg-6 p-2">
-            <img src={{img}} alt="rocket_img" class="img-fluid">
+        <div *ngFor='let img of rocketData.flickr_images' class="col-sm-12 col-md-6 col-lg-6 p-2 gallery">
+            <img (click)='onClick(img)' src={{img}} alt="rocket_img" class="img-fluid">
         </div>
     </div>
+
     
 </div>
 
-<button [routerLink]="['/']" class="btn btn-outline-info my-3">Back</button>
+<button [routerLink]="['/']" class="btn btn-outline-info my-4">Back</button>
+
+<app-img-modal (close)="onClose()" imgUrl={{imageUrl}} title={{rocketData.rocket_name}} *ngIf='showModal === true' ></app-img-modal>
